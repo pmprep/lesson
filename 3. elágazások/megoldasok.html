@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Feladat
+
+      let szam = Number(prompt("1. Feladat: Adj meg egy számot!"));
+      if (isNaN(szam)) {
+        console.log("Ez nem egy érvényes szám");
+      } else if (szam > 10) {
+        console.log("Nagyobb 10");
+      } else if (szam < 10) {
+        console.log("Kisebb 10");
+      } else {
+        console.log("Pontosan 10");
+      }
+
+      // 2. Feladat
+
+      let number = Number(prompt("2. Feladat: Adj meg egy számot!"));
+      if (number >= 20) {
+        console.log("Nagyobb vagy egyenlő, mint 20.");
+      } else if (number < 20) {
+        console.log("Kisebb, mint 20.");
+      }
+
+      // 3. Feladat
+
+      let boolean = confirm("3. Feladat: True legyen vagy false?");
+      if (boolean) {
+        console.log("Szia!");
+      } else {
+        alert("Viszlát");
+      }
+    </script>
+  </body>
+</html>
