@@ -1,0 +1,43 @@
+<script>
+  let array = [1, "csirkecomb", true, 13];
+
+  console.log(array[0]);
+  console.log(array[1]);
+  console.log(array[2]);
+  console.log(array[3]);
+
+  array.push(30);
+
+  console.log(array);
+
+  array.pop();
+  array.pop();
+  array.pop();
+
+  console.log(array);
+
+  array = [1, "csirkecomb", true, 13];
+  array = [1, "sárgarépa", "csirkecomb", true, 13];
+  array.splice(1, 0, "sárgarépa");
+
+  console.log(array.length);
+
+  // az utolsó elem elérése
+  console.log(array[3]);
+  console.log(array[array.length - 1]);
+  array.splice(1, 0, "sárgarépa", false, "huzal");
+  array.splice(1, 0, "sárgarépa");
+  array.splice(1, 0, "sárgarépa");
+  console.log(array);
+
+  let array1 = [1, 2, 3];
+  let array2 = array1;
+
+  console.log(array1 == array2);
+
+  // az első indexet adja vissza ahol szerepel a kereset érték
+  array.indexOf("huzal")
+  console.log(array.indexOf("huzal"))
+
+  
+</script>
