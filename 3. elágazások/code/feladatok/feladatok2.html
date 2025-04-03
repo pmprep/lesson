@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let jelszo = prompt("Jelszo: ");
+      //   if (jelszo.length < 6) console.log("Túl rövid");
+
+      //   let suly = Number(prompt("Testsúly: "));
+      //   if (isNaN(suly) || suly <= 0) {
+      //     console.log("Hiba: csak pozitív szám lehet");
+      //   }
+
+      //   let osztando = Number(prompt("Osztandó: "));
+      //   let oszto = Number(prompt("Osztó: "));
+      //   let eredmeny = osztando / oszto;
+      //   if (isNaN(eredmeny) || !isFinite(eredmeny)) {
+      //     console.log("Az eredmény érvénytelen");
+      //   } else {
+      //     console.log("Az eredmény:", eredmeny);
+      //   }
+
+      //   let szam = Number(prompt("Adj meg egy számot!"));
+      //   if (szam <= 0) {
+      //     console.log("Csak pozitívan!");
+      //   }
+
+      // let nev = prompt("Mia a neved?");
+      // console.log(typeof nev);
+      // if (!nev) {
+      //   console.log("Ej, de titokzatos vagy!");
+      // }
+
+      // 15. Készíts egy gyorshajtási bírság kalkulátort, ami a megengedett sebességet
+      //  vizsgálja, és ezt követően megadott sebességünk alapján kiszámolja, milyen bírságra számíthatunk.
+
+      // - Az egyszerűség kedvéért:
+      //   - a megengedett sebesség +16 és 25km/h között 39.000Ft
+      //   - a megengedett sebesség +26 és 35km/h között 58.500Ft
+      //   - a megengedett sebesség +36 és 45km/h között 78.000Ft
+      //   - a megengedett sebesség +46 és 55km/h között 117.000Ft
+      //   - a megengedett sebesség +56 és 65km/h között 169.000Ft
+      //   - a megengedett sebesség +66 és 75km/h között 260.000Ft
+      //   - a megengedett sebesség 76km/h felett 390.000Ft a bírság
+      // - Az alapvetően elfogadható megengedett sebesség kategóriák:
+      //   - 30km/h, 50km/h, 90km/h, 110km/h
+
+      // let speedLimit = Number(prompt("Mennyi a max megengedett sebbeség?"));
+      // let actualSpeed = Number(prompt("Mennyivel mész?"));
+
+      // let speedDiff = actualSpeed - speedLimit;
+      // let bill;
+
+      // if (speedDiff < 16) {
+      //   bill = 0;
+      // } else if (speedDiff < 26) {
+      //   bill = 39000;
+      // } else if (speedDiff < 36) {
+      //   bill = 58500;
+      // } else if (speedDiff < 46) {
+      //   bill = 78000;
+      // } else if (speedDiff < 56) {
+      //   bill = 117000;
+      // } else if (speedDiff < 66) {
+      //   bill = 169000;
+      // } else if (speedDiff < 76) {
+      //   bill = 260000;
+      // } else {
+      //   bill = 390000;
+      // }
+
+      // console.log("A birságod összege: ", bill);
+
+      // 6. barista
+
+      // Kávét szeretnénk rendelni. A barista megkérdi, hogy tejet, cukrot kérünk-e és
+      // feljegyzi egy papírra, hogy
+
+      // - kávé
+      // - kávé, tejjel
+      // - kávé, cukorral
+      // - vagy kávé, tejjel, cukorral
+
+      // Írj egy programot, ami megkérdezi, hogy a kávét tejjel kérjük-e és, hogy cukrot
+      // kérünk-e bele, és kiírja a megfelelő felsorolt opciót.
+// milk true
+//sugar false
+      let milk = confirm("Kérsz tejet?");
+      let sugar = confirm("Kérsz cukrot?");
+      let message = "Tessék itt a kávéd";
+
+      // milk false / milk == true
+      // milk true / milk == true
+      if (milk) {
+        message += ", tejjel";
+      }
+      if (sugar) {
+        message += ", cukkoral";
+      }
+
+      console.log(message);
+      ("Tessék itt a kávéd");
+      ("Tessék itt a kávéd, cukorral");
+      ("Tessék itt a kávéd, tejjel");
+      ("Tessék itt a kávéd, tejjel, cukorral");
+    </script>
+  </body>
+</html>

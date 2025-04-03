@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Feladat
+
+      // let szam = Number(prompt("1. Feladat: Adj meg egy számot!"));
+      // if (isNaN(szam)) {
+      //   console.log("Ez nem egy érvényes szám");
+      // } else if (szam > 10) {
+      //   console.log("Nagyobb 10");
+      // } else if (szam < 10) {
+      //   console.log("Kisebb 10");
+      // } else {
+      //   console.log("Pontosan 10");
+      // }
+
+      // // 2. Feladat
+
+      // let number = Number(prompt("2. Feladat: Adj meg egy számot!"));
+      // if (number >= 20) {
+      //   console.log("Nagyobb vagy egyenlő, mint 20.");
+      // } else if (number < 20) {
+      //   console.log("Kisebb, mint 20.");
+      // }
+
+      // // 3. Feladat
+
+      // let boolean = confirm("3. Feladat: True legyen vagy false?");
+      // if (boolean) {
+      //   console.log("Szia!");
+      // } else {
+      //   alert("Viszlát");
+      // }
+
+      // 4. Készíts egy korhatár ellenőrzőt. Kérj be a felhasználótól egy számot.
+
+      // - vizsgáld meg hogyha a szám 18 vagy nagyobb akkor "Successful login"
+      // - ha nem akkor pedig "login failed, come back in X years"
+      //   **Az X helyére pedig írd be a bekért életkor és 18 különbözetét**
+
+      //   let age = Number(prompt("Kerlek add meg az eletkorod!"));
+      //   let differ = Number(18 - age);
+
+      //   if (age >= 18) {
+      //     console.log("Successful login");
+      //   } else {
+      //     console.log("login failed, come back in ", differ, "years");
+      //   }
+
+      //   5. Hozz létre egy változót tetszőleges névvel, a változó értékét, tipusát, te választod ki. (haladó)
+
+      //    - Ha a változó szöveg írjuk ki console-ra:
+      //      - ha szöveg, akkor "szöveg",
+      //      - ha szám, akkor "szám",
+      //      - ha logikai érték pedig "logikai érték" (**TIPP: [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)**)
+      //   let variable = true;
+
+      //   if (typeof variable === "boolean") {
+      //     console.log("logikai érték");
+      //   } else if (typeof variable === "string") {
+      //     console.log("szöveg");
+      //   } else if (typeof variable === "number") {
+      //     console.log("szám");
+      //   }
+
+      //  Készíts egy programot egy felvételi pontozására.
+
+      // let magyarEr = Number(prompt("Magyar érettségi pontszámot (0-50)!"));
+      // let emeltMagyar = confirm("Emelt szinten érettségiztél magyarból?");
+
+      // let matekEr = Number(prompt("Matek érettségi pontszámot (0-50)!"));
+      // let emeltMatek = confirm("Emelt szinten érettségiztél matekból?");
+
+      // let angolEr = Number(prompt("Angol érettségi pontszámot (0-50)!"));
+      // let emeltAngol = confirm("Emelt szinten érettségiztél angol?");
+
+      // let magyarPont = 0;
+      // // if (magyarEr < 10) magyarPont = magyarPont + 5; EZ UGYANAZ MINT A NEM KIKOMMENTELT SOR
+      // // if (magyarEr < 10) magyarPont -= 5; LEHET CSÖKKENTENI IS EZZEL AZ ÉRTÉKKEL A VÁLTOZÓT
+
+      // if (magyarEr < 10) magyarPont = 5;
+      // else if (magyarEr < 20) magyarPont = 10;
+      // else if (magyarEr < 30) magyarPont = 15;
+      // else if (magyarEr < 40) magyarPont = 20;
+      // else magyarPont = 25;
+
+      // if (emeltMagyar) magyarPont += 10;
+
+      // if (matekEr < 10) matekPont = 5;
+      // else if (matekEr < 20) matekPont = 10;
+      // else if (matekEr < 30) matekPont = 15;
+      // else if (matekEr < 40) matekPont = 20;
+      // else matekPont = 25;
+
+      // if (emeltMatek) matekPont += 10;
+
+      // if (angolEr < 10) angolPont = 5;
+      // else if (angolEr < 20) angolPont = 10;
+      // else if (angolEr < 30) angolPont = 15;
+      // else if (angolEr < 40) angolPont = 20;
+      // else angolPont = 25;
+
+      // if (emeltAngol) angolPont += 10;
+
+      // let magyarJegy = Number(prompt("Add meg az évvégi jegyedet!"));
+      // let matekJegy = Number(prompt("Add meg az évvégi jegyedet!"));
+      // let angolJegy = Number(prompt("Add meg az évvégi jegyedet!"));
+
+      // let magyarJegyPont = 0;
+
+      // if (magyarJegy === 3) magyarJegyPont = 10;
+      // else if (magyarJegy === 4) magyarJegyPont = 15;
+      // else if (magyarJegy === 5) magyarJegyPont = 20;
+
+      // let matekJegyPont = 0;
+
+      // if (matekJegy === 3) matekJegyPont = 10;
+      // else if (matekJegy === 4) matekJegyPont = 15;
+      // else if (matekJegy === 5) matekJegyPont = 20;
+
+      // let angolJegyPont = 0;
+
+      // if (angolJegy === 3) angolJegyPont = 10;
+      // else if (angolJegy === 4) angolJegyPont = 15;
+      // else if (angolJegy === 5) angolJegyPont = 20;
+
+      // let nyelvvizsga = confirm("Van középfokú nyelvvizsgád?");
+      // let nyevvizsgaPont = 0;
+
+      // if (nyelvvizsga) nyelvvizsgaPont = 25;
+
+      // let verseny = prompt("Verseny? (nincs/bronz/ezüst/arany)").toLowerCase();
+      // let versenyPont = 0;
+
+      // if (verseny === "bronz") versenyPont = 10;
+      // else if (verseny === "ezüst") versenyPont = 20;
+      // else if (verseny === "arany") versenyPont = 30;
+
+      // let osszpontszam =
+      //   magyarPont +
+      //   angolPont +
+      //   matekPont +
+      //   magyarJegyPont +
+      //   angolJegyPont +
+      //   matekJegyPont +
+      //   nyevvizsgaPont +
+      //   versenyPont;
+
+      // let uzenet = "Összpontszám: " + osszpontszam + "\n";
+      // if (osszpontszam < 100) {
+      //   uzenet += "sajnos nem jutottál be";
+      // } else if (osszpontszam <= 150) {
+      //   uzenet += "felvettek a varázslóképzőbe";
+      // } else {
+      //   uzenet += "mehetsz amelyikbe akarsz";
+      // }
+
+      // alert(uzenet);
+
+      let boolean = true;
+
+      if (boolean) {
+        let hatokor = "valami";
+        console.log(hatokor);
+      }
+    </script>
+  </body>
+</html>
