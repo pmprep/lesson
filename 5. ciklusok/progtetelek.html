@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For ciklus és programozási tételek</title>
+  </head>
+  <body>
+    <script>
+      for (let i = 1; i <= 5; i++) {
+        if (i === 3) {
+          continue;
+        }
+        console.log(i);
+      }
+
+      //Programozási tételek
+      //Összegzés
+      let szamok = [3, 7, 1, 9, 4];
+      let osszeg = 0;
+      for (let i = 0; i < szamok.length; i++) {
+        osszeg += szamok[i];
+      }
+      console.log(osszeg);
+
+      //Számlálás (páros számok darabszáma a tömbben)
+      let parosDb = 0;
+      for (let i = 0; i < szamok.length; i++) {
+        if (szamok[i] % 2 === 0) {
+          parosDb++;
+        }
+      }
+      console.log(parosDb);
+
+      //Negatív vizsgálat (Eldöntendő, hogy van-e negatív szám a tömbben)
+      let t = [5, -2, 0, -7];
+      let negativ = false;
+      for (let i = 0; i < t.length; i++) {
+        if (t[i] < 0) {
+          negativ = true;
+          break;
+        }
+      }
+
+      if (negativ) console.log("Van a tömbben negatív szám");
+
+      // Kiválasztás (Legnagyobb szám kiválasztása a tömbből)
+      let max = szamok[0];
+
+      for (let i = 1; i < szamok.length; i++) {
+        if (szamok[i] > max) {
+          max = szamok[i];
+        }
+      }
+      console.log(max);
+
+      // Index keresés (A legkisebb szám indexének megkeresése)
+      let minIndex = 0;
+      for (let i = 1; i < szamok.length; i++) {
+        console.log("i: ", i);
+        console.log("i.edik elem: ", szamok[i]);
+        console.log("aktuális minimum szám indexe: ", minIndex);
+        console.log("aktuális minimum szám ", szamok[minIndex]);
+        console.log("------------------------");
+        if (szamok[i] < szamok[minIndex]) {
+          minIndex = i;
+        }
+      }
+      console.log(minIndex);
+
+      // Beágyazott ciklus: Szorzótáblát készítünk
+
+      //   1*1 1*2 1*3 ...
+      //   2*1 2*2 ...
+      //   3*1 3*2
+      //   4*1 4*2
+      //   5*1 5*2
+
+      //   console.log("SZORZÓTÁBLA");
+      //   for (let i = 1; i <= 5; i++) {
+      //     let belso = "";
+      //     for (let j = 1; j <= 5; j++) {
+      //       //   console.log("Belső " + i + "*" + j);
+      //       belso += (i + "*" + j).padStart(6);
+      //     }
+      //     console.log(belso);
+      //   }
+      //   console.log("Vége");
+
+      console.log("Belső ciklus szemléltetés");
+      for (let i = 1; i <= 5; i++) {
+        console.log(i + ". külső forduló indul");
+        for (let j = 1; j <= 5; j++) {
+          console.log("Belső ciklus dolgozik " + j);
+        }
+        console.log("--------------------");
+      }
+      console.log("Vége");
+    </script>
+  </body>
+</html>
