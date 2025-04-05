@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ciklusok</title>
+  </head>
+  <body>
+    <script>
+      {
+        let a = 42;
+        if (a < 55) {
+          a = 70;
+        }
+        console.log("Scope 1: ", a);
+      }
+
+      {
+        let a = 42;
+        if (a < 55) {
+          let a = 70;
+        }
+        console.log("Scope 2: ", a);
+      }
+
+      {
+        let a = NaN;
+        let b = 0;
+        console.log(a == NaN); // FONTOS: NaN != NaN
+        if (a == NaN) {
+          b += 1;
+        }
+        console.log("Nan ", b);
+      }
+
+      {
+        let a = NaN;
+        let b = 0;
+        console.log("a: ", typeof a); // NaN típusa number
+        if (isNaN(a)) {
+          b += 1;
+        }
+        console.log("NaN 2: ", b);
+      }
+
+      //   {
+      //     let szam = 42;
+      //     let folytat;
+      //     let tipp = prompt("Melyik számra gondoltam?");
+      //     if (tipp != szam) folytat = confirm("Folytassuk?");
+      //     if (folytat) {
+      //       tipp = prompt("Melyik számra gondoltam?");
+      //       if (tipp != szam) folytat = confirm("Folytassuk?");
+      //       if (folytat) {
+      //         tipp = prompt("Melyik számra gondoltam?");
+      //         if (tipp != szam) folytat = confirm("Folytassuk?");
+      //         // ... és így tovább, ez nem egy hatékony módszer --> ciklus a megoldás
+      //       }
+      //     }
+      //   }
+
+      //   {
+      //     let szam = 42;
+      //     let tipp;
+      //     let folytat = true;
+
+      //     while (folytat) {
+      //       tipp = prompt("Melyik számra gondoltam?");
+      //       if (tipp == szam) {
+      //         alert("Eltaláltad!");
+      //         break;
+      //       }
+      //       folytat = confirm("Folytassuk?");
+      //     }
+      //     console.log("Ciklus vége");
+      //   }
+
+      {
+        let i = 1;
+        while (i <= 5) {
+          console.log("Szám: ", i);
+          i++; // Ez ugyanaz mint, hogy (i += 1) vagy (i = i + 1)
+        }
+      }
+
+      //   {
+      //     let szam = prompt("Adj meg egy számot!");
+      //     console.log(szam === 10);
+      //     while (szam === 10) {
+      //       // Nem fut le soha, mert a feltétel sosem igaz
+      //       szam = prompt("Na mégegyszer");
+      //     }
+      //   }
+
+      //   {
+      //     let i = 1;
+      //     while (i <= 5) {
+      //       i + 1;
+      //       // Nem adunk értéket a segédváltozónak,
+      //       // csak számítunk egy értéket,
+      //       // így a ciklusunk végtelen ciklus lesz
+      //     }
+      //   }
+
+      {
+        let reggeli = "rántotta";
+        let ebed = "pacal pörkölt";
+        let vacsora = "sült vér";
+
+        let i = 0;
+        while (i < 3) {
+          i++;
+          if (i == 1) console.log(i + ". étkezés: " + reggeli);
+          if (i == 2) console.log(i + ". étkezés: " + ebed);
+          if (i == 3) console.log(i + ". étkezés: " + vacsora);
+        }
+      }
+
+      {
+        let etkezesek = ["rántotta", "pacal pörkölt", "sült vér"];
+        let i = 0;
+        while (i < etkezesek.length) {
+          console.log(i + 1 + ". étkezés: " + etkezesek[i]);
+          i++;
+        }
+      }
+
+      {
+        let t = [-10, 3, 5, -4];
+        let i = 0;
+        while (i < t.length) {
+          if (t[i] < 0) {
+            console.log("Negatív szám: ", t[i]);
+          }
+          i++;
+        }
+      }
+    </script>
+  </body>
+</html>
